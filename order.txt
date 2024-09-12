@@ -1,21 +1,12 @@
-Furniture Order Form
-
 Faculty Name:
 Contact:
 Date:
 
-Original Request: study lamp, 4
+Original Request: task chair, 1
 
 Items Ordered
-ID: L928
-ID: L982
-ID: L223
-Total Price: $10020
-
-Complete order could not be fulfilled based on current inventory.
-Try reducing the amount of furniture requested or visit any of these manufacturers:
-Fine Office Supplies
-Office Furnishings
-Furniture Goods
+ID: C3405
+ID: C0914
+Total Price: $150
 
 Thank you, come again :)

@@ -1,6 +1,12 @@
-/**
- * @author Andres Caicedo <a
- * href="mailto:acaicedo@ucalgary.ca">acaicedo@ucalgary.ca</a>
+/** 
+ * @author Etienne Lagace <a>
+ * href="mailto:etienne.lagace@ucalgary.ca">etienne.lagace@ucalgary.ca</a>
+ * @author Haniya Ahmed <a>
+ * href="mailto:haniya.ahmed@ucalgary.ca">haniya.ahmed@ucalgary.ca</a>
+ * @author Sadia Khan <a>
+ * href="mailto:sadia.khan1@ucalgary.ca">sadia.khan1@ucalgary.ca</a>
+ * @author Andres Caicedo <a>
+ * href="mailto:acaicedo@ucalgary.ca">acaicedo@ucalgary.ca.ca</a>
  * @version 1.2
  * @since 1.0
  */
@@ -55,7 +61,9 @@ public class OrderForm {
 
         int l = price.size();
         for (int i = 0; i < l; i++) {
-            this.price += price.get(i);
+            if (price.get(i) != 10000) {
+                this.price += price.get(i);
+            }
         }
     }
 
@@ -65,9 +73,7 @@ public class OrderForm {
      * 
      * @description Produces a formatted order in a .txt format. If an order is not
      *              possible, it outputs the names of suggested manufacturers that
-     *              sell the requested furnitrue. of order are outputted if possible
-     *              and an "order could not be fulfilled" text is ouputted if
-     *              overflow was detected from the overflow boolean
+     *              sell the requested furniture.
      * 
      * @param
      * 
@@ -106,9 +112,13 @@ public class OrderForm {
             // checks for overflow to know whether or not an "order could not be fulfilled"
             // message should be sent
             if (overflow) {
-                myWriter.write("Complete order could not be fulfilled based on current inventory.\n");
-                myWriter.write("Try reducing the amount of furniture requested or visit any of these manufacturers:\n");
+                myWriter.write("Order could not be fulfilled based on current inventory.\n");
+                myWriter.write("Suggested manufacturers are:\n");
                 myWriter.write(manufacturer);
+
+                System.out.println("Order could not be fulfilled based on current inventory.");
+                System.out.println("Suggested manufacturers are:");
+                System.out.println(manufacturer);
             }
 
             myWriter.write("\n\nThank you, come again :)");
